@@ -1,7 +1,7 @@
 FROM debian:bullseye-slim
 
 ENV RUBY_VERSION='3.0.3'
-ENV BUNDLER_VERSION='2.3.8'
+ENV BUNDLER_VERSION='2.3.9'
 
 # install debian updates
 RUN apt update && apt upgrade -y \
