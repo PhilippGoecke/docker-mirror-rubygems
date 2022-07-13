@@ -1,9 +1,9 @@
-ARG DIGEST=06a93cbdd49a265795ef7b24fe374fee670148a7973190fb798e43b3cf7c5d0f
+ARG DIGEST=f576b8067b77ff85c70725c976b7b6cde960898e2f19b9abab3fb148407614e2
 
 FROM debian:bullseye-slim@sha256:${DIGEST}
 
 ENV RUBY_VERSION='3.1.2'
-ENV BUNDLER_VERSION='2.3.16'
+ENV BUNDLER_VERSION='2.3.17'
 
 # install debian updates
 RUN apt update && apt upgrade -y \
