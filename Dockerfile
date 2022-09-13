@@ -3,7 +3,7 @@ ARG DIGEST=a811e62769a642241b168ac34f615fb02da863307a14c4432cea8e5a0f9782b8
 FROM debian:bullseye-slim@sha256:${DIGEST}
 
 ENV RUBY_VERSION='3.1.2'
-ENV BUNDLER_VERSION='2.3.20'
+ENV BUNDLER_VERSION='2.3.22'
 
 # install debian updates
 RUN apt update && apt upgrade -y \
