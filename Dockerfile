@@ -9,7 +9,7 @@ ENV BUNDLER_VERSION='2.4.14'
 RUN apt update && apt upgrade -y \
   && apt install -y --no-install-recommends ca-certificates git curl \
   # install ruby dependencies
-  && apt install -y --no-install-recommends bzip2 build-essential autoconf libtool libssl-dev libreadline-dev zlib1g-dev \
+  && apt install -y --no-install-recommends bzip2 build-essential autoconf libtool libyaml-dev libssl-dev libreadline-dev zlib1g-dev \
   # install additional dependencies
   # && apt install -y wget \
   # make image smaller
