@@ -1,9 +1,9 @@
-ARG DIGEST=7606bef5684b393434f06a50a3d1a09808fee5a0240d37da5d181b1b121e7637
+ARG DIGEST=741bae561f5c2261f4cdd535e4fd4c248dec0aafc1b9a1410b3d67ad24571340
 
-FROM debian:bullseye-slim@sha256:${DIGEST}
+FROM debian:bookworm-slim@sha256:${DIGEST}
 
 ENV RUBY_VERSION='3.2.2'
-ENV BUNDLER_VERSION='2.4.14'
+ENV BUNDLER_VERSION='2.4.19'
 
 # install debian updates
 RUN apt update && apt upgrade -y \
