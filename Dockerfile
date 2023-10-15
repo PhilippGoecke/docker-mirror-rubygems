@@ -3,7 +3,7 @@ ARG DIGEST=741bae561f5c2261f4cdd535e4fd4c248dec0aafc1b9a1410b3d67ad24571340
 FROM debian:bookworm-slim@sha256:${DIGEST}
 
 ENV RUBY_VERSION='3.2.2'
-ENV BUNDLER_VERSION='2.4.19'
+ENV BUNDLER_VERSION='2.4.20'
 
 # install debian updates
 RUN apt update && apt upgrade -y \
