@@ -1,9 +1,9 @@
-ARG DIGEST=155280b00ee0133250f7159b567a07d7cd03b1645714c3a7458b2287b0ca83cb
+ARG DIGEST=804194b909ef23fb995d9412c9378fb3505fe2427b70f3cc425339e48a828fca
 
 FROM debian:bookworm-slim@sha256:${DIGEST}
 
 ENV RUBY_VERSION='3.3.1'
-ENV BUNDLER_VERSION='2.5.9'
+ENV BUNDLER_VERSION='2.5.10'
 
 # install debian updates
 RUN apt update && apt upgrade -y \
@@ -13,7 +13,9 @@ RUN apt update && apt upgrade -y \
   # install additional dependencies
   # && apt install -y wget \
   # make image smaller
-  && rm -rf /var/lib/apt/lists/*
+  && rm -rf "/var/lib/apt/lists/*" \
+  && rm -rf /var/cache/apt/archives \
+  && rm -rf /tmp/* /var/tmp/*
 
 # switch to non-root user
 ARG USER=gems
