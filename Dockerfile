@@ -31,7 +31,7 @@ RUN pwd
 ENV PATH "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
 RUN git clone https://github.com/rbenv/rbenv.git "$HOME/.rbenv" --depth 1 \
   && echo "export PATH=\"$HOME/.rbenv/shims:$HOME/.rbenv/bin:\$PATH\"" >> ~/.bashrc \
-  && eval "$(rbenv init)" \
+  && rbenv init \
   && echo 'eval "$(rbenv init -)"' >> $HOME/.bashrc \
   && mkdir -p "$(rbenv root)"/plugins \
   && git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build --depth 1 \
