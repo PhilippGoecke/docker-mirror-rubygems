@@ -1,9 +1,9 @@
-ARG DIGEST=1537a6a1cbc4b4fd401da800ee9480207e7dc1f23560c21259f681db56768f63
+ARG DIGEST=d365f4920711a9074c4bcd178e8f457ee59250426441ab2a5f8106ed8fe948eb
 
 FROM debian:bookworm-slim@sha256:${DIGEST}
 
 ENV RUBY_VERSION='3.3.6'
-ENV BUNDLER_VERSION='2.5.23'
+ENV BUNDLER_VERSION='2.6.2'
 
 # install debian updates
 RUN apt update && apt upgrade -y \
