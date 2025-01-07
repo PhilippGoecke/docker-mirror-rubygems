@@ -2,7 +2,7 @@ ARG DIGEST=d365f4920711a9074c4bcd178e8f457ee59250426441ab2a5f8106ed8fe948eb
 
 FROM debian:bookworm-slim@sha256:${DIGEST}
 
-ENV RUBY_VERSION='3.3.6'
+ENV RUBY_VERSION='3.4.1'
 ENV BUNDLER_VERSION='2.6.2'
 
 # install debian updates
