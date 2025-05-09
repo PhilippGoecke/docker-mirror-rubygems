@@ -1,4 +1,4 @@
-ARG DIGEST=0a0af987b52430c3b9aab639abf0741b9d0aabf548650b9f1d3b5f132cae847d
+ARG DIGEST=b1211f6d19afd012477bd34fdcabb6b663d680e0f4b0537da6e6b0fd057a3ec3
 
 FROM debian:bookworm-slim@sha256:${DIGEST}
 
