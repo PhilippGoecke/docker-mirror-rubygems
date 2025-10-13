@@ -17,14 +17,14 @@ RUN apt update && apt upgrade -y \
   && rm -rf /var/cache/apt/archives \
   && rm -rf /tmp/* /var/tmp/*
 
+
 # switch to non-root user
 ARG USER=gems
-RUN adduser $USER
-USER $USER
-RUN whoami
-# show current workdir
+RUN useradd --create-home --shell /bin/bash $USER
 ARG HOME="/home/$USER"
 WORKDIR $HOME
+USER $USER
+RUN whoami
 RUN pwd
 
 # install rbenv & ruby
