@@ -1,4 +1,5 @@
-ARG DIGEST=18764e98673c3baf1a6f8d960b5b5a1ec69092049522abac4e24a7726425b016
+# https://hub.docker.com/_/debian/tags?name=trixie-slim
+ARG DIGEST=335d26b968695837d1566c442de2a4026049b26ecb8567be2b00f7a900c13637
 
 FROM debian:trixie-slim@sha256:${DIGEST}
 
