@@ -1,5 +1,5 @@
 # https://hub.docker.com/_/debian/tags?name=trixie-slim
-ARG DIGEST=335d26b968695837d1566c442de2a4026049b26ecb8567be2b00f7a900c13637
+ARG DIGEST=e711a7b30ec1261130d0a121050b4ed81d7fb28aeabcf4ea0c7876d4e9f5aca2
 
 FROM debian:trixie-slim@sha256:${DIGEST}
 
