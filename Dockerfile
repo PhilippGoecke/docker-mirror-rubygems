@@ -3,8 +3,8 @@ ARG DIGEST=e711a7b30ec1261130d0a121050b4ed81d7fb28aeabcf4ea0c7876d4e9f5aca2
 
 FROM debian:trixie-slim@sha256:${DIGEST}
 
-ENV RUBY_VERSION='3.4.8'
-ENV BUNDLER_VERSION='4.0.2'
+ENV RUBY_VERSION='4.0.0'
+ENV BUNDLER_VERSION='4.0.3'
 
 # install debian updates
 RUN apt update && apt upgrade -y \
@@ -30,12 +30,12 @@ RUN pwd
 
 # install rbenv & ruby
 ENV PATH "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
-RUN git clone https://github.com/rbenv/rbenv.git "$HOME/.rbenv" --depth 1 \
+RUN git clone --depth 1 https://github.com/rbenv/rbenv.git "$HOME/.rbenv" \
   && echo "export PATH=\"$HOME/.rbenv/shims:$HOME/.rbenv/bin:\$PATH\"" >> ~/.bashrc \
   && rbenv init \
   && echo 'eval "$(rbenv init -)"' >> $HOME/.bashrc \
   && mkdir -p "$(rbenv root)"/plugins \
-  && git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build --depth 1 \
+  && git clone --depth 1 https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build \
   && rbenv install -L | grep "$RUBY_VERSION" \
   && rbenv install $RUBY_VERSION \
   && rbenv rehash
