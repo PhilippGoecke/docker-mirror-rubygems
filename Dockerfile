@@ -1,10 +1,10 @@
 # https://hub.docker.com/_/debian/tags?name=trixie-slim
-ARG DIGEST=4e401d95de7083948053197a9c3913343cd06b706bf15eb6a0c3ccd26f436a0e
+ARG DIGEST=adfc1194ad752229ec188bdb8e43231aa80deba9812f8ebc4cd73efbb6155b15
 
 FROM debian:trixie-slim@sha256:${DIGEST}
 
 ENV RUBY_VERSION='4.0.5'
-ENV BUNDLER_VERSION='4.0.14'
+ENV BUNDLER_VERSION='4.0.15'
 
 # install debian updates
 RUN apt update && apt upgrade -y \
