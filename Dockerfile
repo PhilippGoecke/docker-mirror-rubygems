@@ -3,8 +3,8 @@ ARG DIGEST=28de0877c2189802884ccd20f15ee41c203573bd87bb6b883f5f46362d24c5c2
 
 FROM debian:trixie-slim@sha256:${DIGEST}
 
-ENV RUBY_VERSION='4.0.5'
-ENV BUNDLER_VERSION='4.0.16'
+ENV RUBY_VERSION='4.0.6'
+ENV BUNDLER_VERSION='4.0.17'
 
 # install debian updates
 RUN apt update && apt upgrade -y \
