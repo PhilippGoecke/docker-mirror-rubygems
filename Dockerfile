@@ -1,9 +1,9 @@
 # https://hub.docker.com/_/debian/tags?name=trixie-slim
-ARG DIGEST=020c0d20b9880058cbe785a9db107156c3c75c2ac944a6aa7ab59f2add76a7bd
+ARG DIGEST=62bd423aeee912639ca8ee681c2b762cb3e25137e0a92b20be455898a9f034ad
 
 FROM debian:trixie-slim@sha256:${DIGEST}
 
-ENV RUBY_VERSION='4.0.7'
+ENV RUBY_VERSION='4.0.9'
 ENV BUNDLER_VERSION='4.0.23'
 
 # install debian updates
